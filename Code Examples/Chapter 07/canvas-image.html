@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
 						newImg = context.getImageData(0,0,400,400),
 						newLen = newImg.data.length;
 				for (i=0;i<newLen;i+=4) {
-          newImg.data[i] = 255 - newImg.data[i];
+					newImg.data[i]   = 255 - newImg.data[i];
 					newImg.data[i+1] = 255 - newImg.data[i+1];
-					newImg.data[i+1] = 255 - newImg.data[i+1];
+					newImg.data[i+2] = 255 - newImg.data[i+2];
 				}
 				context.putImageData(newImg,0,0);
 			}, false);
